@@ -1,148 +1,63 @@
-/* ==== АНИМИРОВАННЫЙ ФОН ==== */
+/* src/App.css */
+
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(-45deg, #1f1f1f, #2a2a72, #1e1e30, #181818);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   background-size: 400% 400%;
-  animation: moveBg 15s ease infinite;
-  color: #fff;
+  animation: gradientMove 20s ease infinite;
+  color: #e0e0e0;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding-top: 40px;
+  padding: 50px 15px;
 }
 
-@keyframes moveBg {
+@keyframes gradientMove {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* ==== СТЕКЛЯННАЯ КАРТОЧКА ==== */
 .glass-container {
-  width: 95%;
-  max-width: 650px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-radius: 18px;
-  padding: 30px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+  background: rgba(30, 30, 30, 0.6);
+  border-radius: 24px;
+  padding: 40px 35px;
+  max-width: 700px;
+  width: 100%;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #f0f0f0;
 }
 
-/* ==== ТЕКСТ ==== */
 .main-title {
+  font-size: 3rem;
+  font-weight: 700;
   text-align: center;
-  font-size: 32px;
-  color: #ffffffcc;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  letter-spacing: 1.2px;
+  color: #00ffd5;
+  text-shadow: 0 0 8px #00ffd5aa;
 }
 
-/* ==== ВВОД И КНОПКИ ==== */
-.form-glass {
-  display: flex;
-  gap: 12px;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
-}
-
-.input-glass {
-  flex: 1;
-  padding: 12px 14px;
-  border: none;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.07);
-  color: #fff;
-  outline: none;
-  transition: 0.3s;
-}
-
-.input-glass::placeholder {
-  color: #999;
-}
-
-.input-glass:focus {
-  background: rgba(255, 255, 255, 0.12);
-}
-
-.button-glass {
-  padding: 12px 16px;
-  border: none;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.12);
-  color: #fff;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.button-glass:hover {
-  background: rgba(255, 255, 255, 0.2);
-}
-
-.sort-button.active {
-  background: rgba(0, 255, 170, 0.3);
-  color: #00ffaa;
-}
-
-/* ==== СПИСОК ==== */
-.todo-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.glass-item {
-  background: rgba(255, 255, 255, 0.06);
-  border-radius: 12px;
-  padding: 14px;
-  margin-bottom: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: 0.3s;
-}
-
-.todo-title {
-  flex: 1;
-  cursor: pointer;
-}
-
-.completed .todo-title {
-  text-decoration: line-through;
-  color: #aaa;
-}
-
-.todo-actions {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.todo-actions input[type="checkbox"] {
-  transform: scale(1.2);
-}
-
-.delete-button {
-  background: rgba(255, 0, 0, 0.25);
-}
-
-.delete-button:hover {
-  background: rgba(255, 0, 0, 0.5);
-}
-
-/* ==== СООБЩЕНИЯ ==== */
 .no-todos {
   text-align: center;
-  opacity: 0.6;
+  font-style: italic;
+  opacity: 0.7;
+  margin-top: 40px;
+  font-size: 1.2rem;
 }
 
 .error {
-  background: rgba(255, 0, 0, 0.1);
-  color: #ff4d4d;
-  padding: 14px;
-  border-radius: 10px;
+  background: rgba(255, 50, 50, 0.15);
+  color: #ff5c5c;
+  padding: 16px;
+  border-radius: 14px;
+  font-weight: 600;
   text-align: center;
+  margin-top: 20px;
 }

@@ -1,0 +1,73 @@
+/* src/components/TodoList.css */
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todo-item {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 16px;
+  padding: 16px 22px;
+  margin-bottom: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 3px 8px rgba(0, 255, 213, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.todo-item:hover {
+  background: rgba(0, 255, 213, 0.15);
+}
+
+.todo-title {
+  flex: 1;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: #d4f9f5;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+.todo-item.completed .todo-title {
+  text-decoration: line-through;
+  color: #777777cc;
+  font-style: italic;
+}
+
+.todo-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.todo-actions input[type='checkbox'] {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  accent-color: #00ffd5;
+  transition: accent-color 0.3s ease;
+}
+
+.todo-actions input[type='checkbox']:hover {
+  accent-color: #00a8b5;
+}
+
+.delete-button {
+  background: #ff3b3b;
+  border: none;
+  border-radius: 14px;
+  padding: 8px 18px;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 0 15px #ff3b3baa;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.delete-button:hover {
+  background: #ff1a1a;
+  box-shadow: 0 0 25px #ff1a1aaa;
+}
