@@ -1,0 +1,37 @@
+.task-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.task-page h2 {
+  font-size: 24px;
+  color: #dbb60f;
+}
+
+.task-page textarea {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  resize: vertical;
+  min-height: 100px;
+  outline: none;
+}
+
+.task-page button {
+  background: #c2970d;
+  color: #000;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-right: 10px;
+  transition: background 0.3s;
+}
+
+.task-page button:hover {
+  background: #5d4804;
+}

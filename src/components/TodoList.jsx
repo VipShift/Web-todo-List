@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './TodoList.css';
 
-export default function TodoList({ todos, toggleTodoComplete, deleteTodo }) {
+export default function TodoList({ todos, toggleTodoComplete }) {
   if (todos.length === 0) {
     return <li className="no-todos">Список дел пуст или не найдено.</li>;
   }
@@ -13,26 +14,18 @@ export default function TodoList({ todos, toggleTodoComplete, deleteTodo }) {
           key={todo.id}
           className={`todo-item ${todo.completed ? 'completed' : ''}`}
         >
-          <span
-            className="todo-title"
-            onClick={() => toggleTodoComplete(todo.id, todo.completed)}
-          >
-            {todo.title || todo.text}
-          </span>
-          <div className="todo-actions">
+          <div className="todo-checkbox">
             <input
               type="checkbox"
               checked={todo.completed}
               onChange={() => toggleTodoComplete(todo.id, todo.completed)}
-              title="Отметить как выполненное"
             />
-            <button
-              onClick={() => deleteTodo(todo.id)}
-              className="delete-button"
-            >
-              Удалить
-            </button>
           </div>
+          <Link to={`/task/${todo.id}`} className="todo-title">
+            {todo.title.length > 50
+              ? todo.title.slice(0, 50) + '...'
+              : todo.title}
+          </Link>
         </li>
       ))}
     </ul>

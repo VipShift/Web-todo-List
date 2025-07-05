@@ -1,5 +1,6 @@
+// TodoForm.jsx
 import React from 'react';
-import './TodoForm.css'; // убедись, что путь верный, относительно файла
+import './TodoForm.css';
 
 export default function TodoForm({ newTodoText, setNewTodoText, addTodo }) {
   return (
